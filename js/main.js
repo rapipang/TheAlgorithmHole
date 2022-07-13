@@ -18,7 +18,7 @@ import {
 } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 import { Vector3 } from 'three';
 
-let playButton = document.querySelector('#okPlay');
+
 
 //GrannyKnot
 class GrannyKnot extends THREE.Curve {
