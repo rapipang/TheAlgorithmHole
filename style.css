@@ -1,0 +1,133 @@
+html {
+  scrollbar-width: none;
+}
+
+canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100000vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.modal-container{
+  background-color: rgba(0, 0, 0, 0.468);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  transition: opacity 1s;
+}
+
+.modal-container-cngt{
+  background-color: rgba(29, 13, 46, 0.407);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  justify-content: center;
+  position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  
+  transition: opacity 2.2s;
+}
+
+
+
+
+
+.modal-container-load{
+  background-color: rgb(16, 4, 28);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  transition: opacity 2.2s;
+}
+
+
+.modal{
+  background-color: rgba(61, 12, 67, 0.69);
+  width: 600px;
+  padding: 30px;
+  max-width: 100%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modal h2{
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+
+.modal p{
+  color: rgb(187, 187, 187);
+}
+
+.modal button{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#video{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width:100%;
+  height:auto;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  transition: opacity 2.2s;
+}
+
+@media (orientation: portrait){
+  #video{
+    width:auto;
+    height:100%;
+  }
+}
+
+
+
+canvas {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 100%;
+  max-width: 100%;
+}
