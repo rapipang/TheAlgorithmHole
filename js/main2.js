@@ -18,6 +18,14 @@ import {
   UnrealBloomPass
 } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 
+function init() {
+  var loader = new OBJLoader();
+  loader.load("/asset/model/graphs.obj ",
+
+    function (twitr) {
+      window.stage = new Stage(twitr);
+    });
+}
 
 window.onload = init;
 
@@ -251,13 +259,5 @@ Particle.prototype.update = function (stage) {
 }
 
 
-function init() {
-  var loader = new OBJLoader();
-  loader.load("/asset/model/graphs.obj ",
-
-    function (twitr) {
-      window.stage = new Stage(twitr);
-    });
-}
 
 

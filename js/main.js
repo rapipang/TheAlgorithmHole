@@ -18,6 +18,17 @@ import {
 } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 import { Vector3 } from 'three';
 
+function init() {
+  var loader = new OBJLoader();
+  loader.load("/asset/model/graphs.obj",
+
+    function (twitr) {
+      window.stage = new Stage(twitr);
+    });
+
+}
+
+
 window.onload = init;
 
 //GrannyKnot
@@ -546,15 +557,6 @@ Particle.prototype.update = function (stage) {
 
 
 
-function init() {
-  var loader = new OBJLoader();
-  loader.load("/asset/model/graphs.obj",
-
-    function (twitr) {
-      window.stage = new Stage(twitr);
-    });
-
-}
 
 
 
