@@ -19,6 +19,8 @@ import {
 } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 
 
+window.onload = init;
+
 //GrannyKnot
 class GrannyKnot extends THREE.Curve {
 
@@ -258,4 +260,4 @@ function init() {
     });
 }
 
-window.onload = init;
+
