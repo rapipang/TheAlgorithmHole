@@ -16,7 +16,7 @@ import {
 import {
   UnrealBloomPass
 } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
-import { Vector3 } from 'three';
+
 
 function init() {
   var loader = new OBJLoader();
