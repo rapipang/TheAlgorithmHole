@@ -18,13 +18,17 @@
       <h2 style="font-size: 5vh;" >Great!</h2>
       <p style="font-size: 2.5vh;"> You are out off the loop</p>
       
-          <button style="background-color: rgb(19, 14, 24); color: aliceblue;">GoBack</button>
+          <button onclick="goBack()" style="background-color: rgb(19, 14, 24); color: aliceblue;">GoBack</button>
   </div>
 </div>
 
 
   <script type="module" src="/js/main2.js"></script>
-
+  <script>
+    function goBack(){
+      window.location.href = './index.html';
+    }
+  </script>
 
 </body>
 
