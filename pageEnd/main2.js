@@ -20,7 +20,7 @@ import {
 
 function init() {
   var loader = new OBJLoader();
-  loader.load("/asset/model/graphs.obj ",
+  loader.load("/media/graphs.obj",
 
     function (twitr) {
       window.stage = new Stage(twitr);
@@ -59,9 +59,7 @@ function Stage(obj) {
 }
 
 Stage.prototype.init = function () {
-  var rampUpFX = new Audio('./texture/Sfx/rampUp.mp3');
-  rampUpFX.loop = false;
-  rampUpFX.volume = 0.7;
+
 
   this.particleACount = 900;
 
@@ -98,8 +96,8 @@ Stage.prototype.init = function () {
   this.controls.maxDistance = 10;
   this.controls.minPolarAngle = 1.3962634016;
   this.controls.maxPolarAngle = 1.3962634016;
-  this.controls.autoRotate = true;
-  this.controls.autoRotateSpeed  = 0.8;
+  // this.controls.autoRotate = true;
+  // this.controls.autoRotateSpeed  = 0.8;
 
   const ambient = new THREE.HemisphereLight(0x53EEEE, 0x111142, 0.5);
   this.scene.add(ambient);
@@ -156,11 +154,11 @@ Stage.prototype.onResize = function () {
   this.renderer.setPixelRatio(window.devicePixelRatio);
 };
 
-Stage.prototype.render = function() {
-  
- 
+Stage.prototype.render = function () {
+
+
   this.controls.update();
-  
+
   ///Particles Update
   for (var i = 0; i < this.particles.length; i++) {
     this.particles[i].update(this);
@@ -176,7 +174,7 @@ Stage.prototype.render = function() {
 };
 
 function Particle(scene) {
-  
+
   this.pRRandom = Math.random();
   // this.typeA = new THREE.IcosahedronGeometry(0.15 * (this.pRRandom + 0.3), 0);
   this.typeA = objA.geometry;
@@ -193,31 +191,32 @@ function Particle(scene) {
       fog: true,
       transparent: true,
       opacity: 1,
-    }); } 
-  else if (this.pRRandom <= 0.39) {
+    });
+  } else if (this.pRRandom <= 0.39) {
     this.pGeo = this.typeB;
     this.pMat = new THREE.MeshPhongMaterial({
       color: 0x004166,
       shininess: 21,
       emissive: 0x3e034f,
-      specular:0xf40101,
+      specular: 0xf40101,
       depthWrite: true,
       fog: true,
       transparent: true,
       opacity: 0.8,
-    });}
-  else if (this.pRRandom >= 0.61) {
+    });
+  } else if (this.pRRandom >= 0.61) {
     this.pGeo = this.typeC;
     this.pMat = new THREE.MeshPhongMaterial({
       color: 0x004770,
       shininess: 31,
       emissive: 0xa80073,
-      specular:0xffbb00,
+      specular: 0xffbb00,
       depthWrite: true,
       fog: true,
       transparent: true,
       opacity: 0.9,
-    });}
+    });
+  }
 
 
 
@@ -232,7 +231,7 @@ function Particle(scene) {
 
 Particle.prototype.update = function (stage) {
 
- 
+
   this.spdOfset = this.pRRandom + 0.5;
   this.addOfset = this.pRRandom * 1000;
   this.tVal += 0.01;
@@ -257,7 +256,3 @@ Particle.prototype.update = function (stage) {
   this.pMesh.rotation.z += this.rotate.z;
 
 }
-
-
-
-
