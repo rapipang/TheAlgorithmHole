@@ -75,21 +75,16 @@ var checkScrollSpeed = (function (settings) {
 
 function Stage(obj) {
 
-  window.objA = obj.children[0];
-  window.objB = obj.children[1];
+  window.objA = obj.children[5]; //
+  window.objB = obj.children[2];
   window.objC = obj.children[3];
-  window.wlcm = obj.children[2];
-  window.noEscp = obj.children[6];
-  window.nless = obj.children[5];
-  window.answr = obj.children[4];
-  window.hereTxt = obj.children[7];
+  window.wlcm = obj.children[7];
+  window.noEscp = obj.children[4];
+  window.nless = obj.children[6];
+  window.answr = obj.children[0];
+  window.hereTxt = obj.children[1];
 
-  //2 Welcome
-  //3 IG
-  //4 answr
-  //5 Unless
-  //6 CantEscape
-  //7 HERE
+
   this.init();
   this.createMesh();
   window.requestAnimationFrame(this.render.bind(this));

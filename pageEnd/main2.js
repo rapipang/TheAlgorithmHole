@@ -47,8 +47,8 @@ class GrannyKnot extends THREE.Curve {
 
 function Stage(obj) {
 
-  window.objA = obj.children[0];
-  window.objB = obj.children[1];
+  window.objA = obj.children[5]; //
+  window.objB = obj.children[2];
   window.objC = obj.children[3];
 
   this.init();
