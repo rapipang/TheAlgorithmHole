@@ -392,7 +392,7 @@ Stage.prototype.updateCamera = function () {
 }
 
 Stage.prototype.updateWin = function () {
-  if (this.video.currentTime >= 57 && !this.isAsk) {
+  if (this.video.currentTime >= 58 && !this.isAsk) {
     this.rampUpFX.volume = 0;
     this.isAsk = true;
 
@@ -417,8 +417,7 @@ Stage.prototype.updateWin = function () {
 }
 
 Stage.prototype.jumpBlink = function () {
-
-
+Alert('This website will auto-play music and sound!');
 }
 
 Stage.prototype.render = function () {
@@ -432,10 +431,7 @@ Stage.prototype.render = function () {
     this.modalBox.style.opacity = '0';
   }
 
-if (this.isConfirm == false){
-  Alert('This website will auto-play music and sound!');
-  //this.isConfirm = true;
-}
+
 
   if (this.video.readyState === 4) { 
     this.modalLoad.style.opacity = "0"
