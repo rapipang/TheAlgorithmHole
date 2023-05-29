@@ -137,6 +137,7 @@ Stage.prototype.init = function () {
   this.renderer.setSize(window.innerWidth, window.innerHeight);
   this.renderer.setPixelRatio(window.devicePixelRatio);
   this.renderer.toneMappingExposure = 0.8; 
+  alert('ALERT! This page will auto-play music and sound FX');
 
 
 
@@ -544,7 +545,6 @@ function init() {
       window.stage = new Stage(twitr);
     });
   
-alert('ALERT! This page will auto-play music and sound FX');
 
 }
 window.onload = init;
