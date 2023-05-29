@@ -35,9 +35,20 @@
   </div>
 </div>
   
+  <div id = "ModalNotif" class="modal-container-load">
+  <div class="modal">
+      <h2 style="font-size: 5vh;">Please Wait...</h2>
+       <button class="button close-button">close modal</button>
+  </div>
+</div>
+  
   <script type="module" src="/main.js"></script>
   <script>
+    const closeModal = document.querySelector(".close-button");
     
+    closeModal.addEventListener("click", () => {
+    modal.close();
+});
   </script>
 
 </body>
