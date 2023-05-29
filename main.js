@@ -433,8 +433,8 @@ Stage.prototype.render = function () {
   }
 
 if (this.isConfirm == false){
-  Alert('This web will auto-play music and sound');
-  this.isConfirm = true;
+  Alert('This website will auto-play music and sound!');
+  //this.isConfirm = true;
 }
 
   if (this.video.readyState === 4) { 
