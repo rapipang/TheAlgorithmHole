@@ -99,8 +99,10 @@ Stage.prototype.init = function () {
   this.fxPlayed = false;
   this.modalBox = document.querySelector("#rotatePop");
   this.modalLoad = document.querySelector("#loadContent");
-
+ 
+  this.isConfirm = false;
   let isAsk = false;
+
   this.pointer = new THREE.Vector2();
   this.boost = 0;
   this.EaseVal = 0;
@@ -137,7 +139,7 @@ Stage.prototype.init = function () {
   this.renderer.setSize(window.innerWidth, window.innerHeight);
   this.renderer.setPixelRatio(window.devicePixelRatio);
   this.renderer.toneMappingExposure = 0.8; 
-  alert('ALERT! This page will auto-play music and sound FX');
+
 
 
 
@@ -430,9 +432,12 @@ Stage.prototype.render = function () {
     this.modalBox.style.opacity = '0';
   }
 
+if (this.isConfirm == false){
+  Alert('This web will auto-play music and sound');
+  this.isConfirm = true;
+}
 
-
-  if (this.video.readyState === 4) {
+  if (this.video.readyState === 4) { 
     this.modalLoad.style.opacity = "0"
     if (this.video.currentTime < 15) {
       this.updateCamera();
@@ -441,6 +446,7 @@ Stage.prototype.render = function () {
 
     this.handleEvents();
     this.updateWin();
+    
     ///Particles Update
     for (var i = 0; i < this.particles.length; i++) {
       this.particles[i].update(this);
