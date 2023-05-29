@@ -417,7 +417,7 @@ Stage.prototype.updateWin = function () {
 }
 
 Stage.prototype.jumpBlink = function () {
-Alert('This website will auto-play music and sound!');
+
 }
 
 Stage.prototype.render = function () {
