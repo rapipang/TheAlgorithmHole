@@ -537,6 +537,7 @@ Particle.prototype.update = function (stage) {
 
 function init() {
   window.scrollTo(0, 0);
+  alert('ALERT! This page will auto-play music and sound FX');
   var loader = new OBJLoader();
   loader.load("/media/graphs.obj",
 
