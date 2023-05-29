@@ -100,7 +100,7 @@ Stage.prototype.init = function () {
   this.modalBox = document.querySelector("#rotatePop");
   this.modalLoad = document.querySelector("#loadContent");
  
-  this.isConfirm = false;
+  let isConfirm = false;
   let isAsk = false;
 
   this.pointer = new THREE.Vector2();
