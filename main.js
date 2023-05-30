@@ -547,7 +547,7 @@ function init() {
       window.stage = new Stage(twitr);
     });
       setTimeout(function () {
-      Alert('POP!!!')
+      alert('POP!!!')
     }, 3000);
       console.log("updated!");
 }
