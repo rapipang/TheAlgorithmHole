@@ -548,7 +548,7 @@ function init() {
     });
       setTimeout(function () {
       alert('POP!!!')
-    }, 3000);
+    , 3000)};
       console.log("updated!");
 }
 window.onload = init;
