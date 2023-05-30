@@ -548,6 +548,7 @@ function init() {
     });
   
    window.onload(setTimeout(Alert('POP!!!'), 3000);
+                 console.log("updated!");
 
 }
 window.onload = init;
