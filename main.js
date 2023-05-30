@@ -546,10 +546,10 @@ function init() {
     function (twitr) {
       window.stage = new Stage(twitr);
     });
-  
-   window.onload(setTimeout(Alert('POP!!!'), 3000);
-                 console.log("updated!");
-
+      setTimeout(function () {
+      (Alert('POP!!!');;
+    }, 3000);
+      console.log("updated!");
 }
 window.onload = init;
 
