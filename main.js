@@ -398,12 +398,12 @@ Stage.prototype.updateWin = function () {
 
     this.video.pause();
     if (confirm("Are You Sure Want To Log Out?")) {
-      if (confirm("Are You Sure?")) {
+      if (confirm("are you sure you press the right button? wanna continue?")) {
+        this.video.play();
+      } else {
         const millis = Date.now() - this.start;
         alert('Wow! You have spend ' + Math.floor(millis / 1000) + ' seconds in this page!');
         window.location.href = "./pageEnd/index2.html";
-      } else {
-        this.video.play();
       }
 
     } else {
