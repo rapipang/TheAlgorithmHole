@@ -36,7 +36,39 @@
 </div>
   
   
+  <div id = "popUp" class="modal-container-load">
+  <div class="modal">
+      <span class="close">&times;</span>
+      <h2 style="font-size: 5vh;">This website will auto-play music and sound</h2>
+      <p style="font-size: 3vh;">Click the page to continue</p>
+  </div>
+</div>
+  
   <script type="module" src="/main.js"></script>
+  
+  <script>
+// Get the modal
+var aPopUp = document.getElementById("popUp");
+
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  aPopUp.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == aPopUp) {
+    aPopUp.style.display = "none";
+  }
+  
+  window.onload = function(e){  modal.style.display = "block"; }
+}
+</script>
+
 
 </body>
 
