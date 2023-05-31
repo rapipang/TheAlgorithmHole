@@ -37,6 +37,8 @@ body {
   transition: opacity 1s;
 }
 
+
+
 .modal-container-cngt{
   background-color: rgba(29, 13, 46, 0.407);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -54,8 +56,19 @@ body {
   transition: opacity 2.2s;
 }
 
-
-
+.modal-container-popup{
+  background-color: rgb(16, 4, 28);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
 
 
 .modal-container-load{
