@@ -97,8 +97,8 @@ Stage.prototype.init = function () {
   this.start = Date.now();
   this.scene = new THREE.Scene();
   this.fxPlayed = false;
-  this.modalBox = document.getElementById("#rotatePop");
-  this.modalLoad = document.getElementById("myModal");
+  this.modalBox = document.querySelector("#rotatePop");
+  this.modalLoad = document.querySelector("myModal");
  
   let isConfirm = false;
   let isAsk = false;
