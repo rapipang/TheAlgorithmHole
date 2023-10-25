@@ -392,7 +392,7 @@ Stage.prototype.updateCamera = function () {
 }
 
 Stage.prototype.updateWin = function () {
-  if (this.video.currentTime >= 58 && !this.isAsk) {
+  if (this.video.currentTime >= 59 && !this.isAsk) {
     this.rampUpFX.volume = 0;
     this.isAsk = true;
 
