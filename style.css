@@ -71,6 +71,22 @@ body {
   width: 100vw;
 }
 
+.modal-container-messege{
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  justify-content: center;
+  position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+
+  transition: opacity 2s;
+}
 
 .modal-container-load{
   background-color: rgb(16, 4, 28);
