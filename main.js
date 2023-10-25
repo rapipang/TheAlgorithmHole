@@ -99,7 +99,14 @@ Stage.prototype.init = function () {
   this.fxPlayed = false;
   this.modalBox = document.querySelector("#rotatePop");
   this.modalLoad = document.getElementById("loadContent");
- 
+  this.modalQuestionA = document.getElementById("questionA");
+
+  this.noButton = document.getElementById("noBtn");
+  this.logOutButton = document.getElementById("logoutBtn");
+
+  this.noButton.disable = true;
+  this.logOutButton.disable = true;
+  
   let isConfirm = false;
   let isAsk = false;
 
@@ -397,18 +404,25 @@ Stage.prototype.updateWin = function () {
     this.isAsk = true;
 
     this.video.pause();
-    if (confirm("Are You Sure Want To Log Out?")) {
-      if (confirm("are you sure you press the right button? wanna continue?")) {
-        this.video.play();
-      } else {
-        const millis = Date.now() - this.start;
-        alert('Wow! You have spend ' + Math.floor(millis / 1000) + ' seconds in this page!');
-        window.location.href = "./pageEnd/index2.html";
-      }
+    
+    this.modalQuestionA.style.opacity = "1";
+    this.noButton.disable = false;
+    this.logOutButton.disable = false;
+    this.noButton.addEventListener("click", this.logOut);
+    this.logOutButton.addEventListener("click", this.continue);
+    
+    // if (confirm("Are You Sure Want To Log Out?")) {
+    //   if (confirm("are you sure you press the right button? wanna continue?")) {
+    //     this.video.play();
+    //   } else {
+    //     const millis = Date.now() - this.start;
+    //     alert('Wow! You have spend ' + Math.floor(millis / 1000) + ' seconds in this page!');
+    //     window.location.href = "./pageEnd/index2.html";
+    //   }
 
-    } else {
-      this.video.play();
-    }
+    // } else {
+    //   this.video.play();
+    // }
   }
 
   if (this.rampUpFX.currentTime < 0.0) {
@@ -416,9 +430,16 @@ Stage.prototype.updateWin = function () {
   }
 }
 
-Stage.prototype.jumpBlink = function () {
-
+Stage.prototype.logOut = function () {
+    const millis = Date.now() - this.start;
+    alert('Wow! You have spend ' + Math.floor(millis / 1000) + ' seconds in this page!');
+    window.location.href = "./pageEnd/index2.html";
 }
+
+Stage.prototype.continue = function () {
+    this.video.play();
+}
+
 
 Stage.prototype.render = function () {
 
