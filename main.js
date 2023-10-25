@@ -101,11 +101,11 @@ Stage.prototype.init = function () {
   this.modalLoad = document.getElementById("loadContent");
   this.modalQuestionA = document.getElementById("questionA");
 
-  this.noButton = document.getElementById("noBtn");
-  this.logOutButton = document.getElementById("logoutBtn");
+  // this.noButton = document.getElementById("noBtn");
+  // this.logOutButton = document.getElementById("logoutBtn");
 
-  this.noButton.disable = true;
-  this.logOutButton.disable = true;
+  // this.noButton.disable = true;
+  // this.logOutButton.disable = true;
   
   let isConfirm = false;
   let isAsk = false;
