@@ -405,24 +405,24 @@ Stage.prototype.updateWin = function () {
 
     this.video.pause();
     
-    this.modalQuestionA.style.opacity = "1";
-    this.noButton.disable = false;
-    this.logOutButton.disable = false;
-    this.noButton.addEventListener("click", this.logOut);
-    this.logOutButton.addEventListener("click", this.continue);
+    // this.modalQuestionA.style.opacity = "1";
+    // this.noButton.disable = false;
+    // this.logOutButton.disable = false;
+    // this.noButton.addEventListener("click", this.logOut);
+    // this.logOutButton.addEventListener("click", this.continue);
     
-    // if (confirm("Are You Sure Want To Log Out?")) {
-    //   if (confirm("are you sure you press the right button? wanna continue?")) {
-    //     this.video.play();
-    //   } else {
-    //     const millis = Date.now() - this.start;
-    //     alert('Wow! You have spend ' + Math.floor(millis / 1000) + ' seconds in this page!');
-    //     window.location.href = "./pageEnd/index2.html";
-    //   }
+    if (confirm("Are You Sure Want To Log Out?")) {
+      if (confirm("are you sure you press the right button? wanna continue?")) {
+        this.video.play();
+      } else {
+        const millis = Date.now() - this.start;
+        alert('Wow! You have spend ' + Math.floor(millis / 1000) + ' seconds in this page!');
+        window.location.href = "./pageEnd/index2.html";
+      }
 
-    // } else {
-    //   this.video.play();
-    // }
+    } else {
+      this.video.play();
+    }
   }
 
   if (this.rampUpFX.currentTime < 0.0) {
